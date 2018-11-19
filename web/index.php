@@ -399,12 +399,6 @@ if (strtolower($message['text']) == "小助理" || $message['text'] == "小助�
 ==============================
 */
 
-foreach ($client->parseEvents() as $event) {
-switch ($event['type']) {       
-    case 'message':
-        // 讀入訊息
-        $message = $event['message'];
-
 $json = file_get_contents('https://spreadsheets.google.com/feeds/list/1ARv7PRmjKrHXxMpdFwuNvwPshXs9hhBTzKJUsMcYytg/od6/public/values?alt=json');
             $data = json_decode($json, true);
             $result = array();
@@ -457,8 +451,7 @@ $json = file_get_contents('https://spreadsheets.google.com/feeds/list/1ARv7PRmjK
     default:
         error_log("Unsupporeted event type: " . $event['type']);
         break;
-}
-}
+
 
 
                     break;
