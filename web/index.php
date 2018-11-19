@@ -174,6 +174,292 @@ if (strtolower($message['text']) == "歡迎新朋友" || $message['text'] == "�
         )
     ));
 }
+/**
+==============================
+彩飄盟
+==============================
+*/
+if (strtolower($message['text']) == "彩飄" || $message['text'] == "彩飄盟"){
+    $client->replyMessage(array(
+        'replyToken' => $event['replyToken'],
+        'messages' => array(
+            array(
+                'type' => 'template', // 訊息類型 (模板)
+                'altText' => '歡迎來到彩飄性別權益推動聯盟！', // 替代文字
+                'template' => array(
+                    'type' => 'carousel', // 類型 (旋轉木馬)
+                    'columns' => array(
+                        array(
+                            'thumbnailImageUrl' => 'https://i.imgur.com/hd32upY.png',
+                            'title' => '彩飄性別權益推動聯盟',
+                            'text' => '成為風，讓彩虹旗飄揚',
+                            'actions' => array(
+                                array(
+                                    'type' => 'uri',
+                                    'label' => '官方網站',
+                                    'uri' => 'https://sites.google.com/view/rfgraa'
+                                ),
+                                array(
+                                    'type' => 'uri',
+                                    'label' => '粉專點讚，設為搶先看',
+                                    'uri' => 'https://www.facebook.com/RFGRAA'
+                                ),
+                                array(
+                                    'type' => 'uri',
+                                    'label' => '加入彩飄盟Line@生活圈',
+                                    'uri' => 'https://line.me/R/ti/p/@fvk1609b'
+                                )
+                            )
+                        ),
+                        array(
+                            'thumbnailImageUrl' => 'https://i.imgur.com/hd32upY.png',
+                            'title' => '彩虹補給站',
+                            'text' => '彩飄盟友善環境',
+                            'actions' => array(
+                                array(
+                                    'type' => 'uri',
+                                    'label' => '彩虹補給站名冊',
+                                    'uri' => 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTjQTmR2T-mCgAYXveamDLNpE0nmyQd04HwBr_GCHFa7NwCW4ncvDwABnHQ0IymmgqEiyeIIJLtbYvP/pubhtml?gid=0&single=true'
+                                ),
+                                array(
+                                    'type' => 'uri',
+                                    'label' => '站點地圖',
+                                    'uri' => 'https://drive.google.com/open?id=139uI9wmK6R-MAXnXXGVvzMKztQty2pYK&usp=sharing'
+                                ),
+                                array(
+                                    'type' => 'uri',
+                                    'label' => '加入我們成為友善環境',
+                                    'uri' => 'https://goo.gl/forms/LrZB4AAJTqkQkn8F3'
+                                )
+                            )
+                        ),
+                        array(
+                            'thumbnailImageUrl' => 'https://i.imgur.com/hd32upY.png',
+                            'title' => 'YouTube頻道',
+                            'text' => '成為風，讓彩虹旗飄揚',
+                            'actions' => array(
+                                array(
+                                    'type' => 'uri',
+                                    'label' => '彩飄盟官方YouTube頻道',
+                                    'uri' => 'https://goo.gl/9YVwr6'
+                                ),
+                                array(
+                                    'type' => 'uri',
+                                    'label' => '記得訂閱頻道',
+                                    'uri' => 'https://goo.gl/9YVwr6'
+                                ),
+                                array(
+                                    'type' => 'uri',
+                                    'label' => '並打開鈴鐺！',
+                                    'uri' => 'https://goo.gl/9YVwr6'
+                                )
+                            )
+                        ),
+                        array(
+                            'thumbnailImageUrl' => 'https://i.imgur.com/hd32upY.png',
+                            'title' => '彩飄盟之歌-彩虹旗',
+                            'text' => '唱出彩虹旗・世界更美麗',
+                            'actions' => array(
+                                array(
+                                    'type' => 'uri',
+                                    'label' => '彩飄盟之歌ＭＶ',
+                                    'uri' => 'https://youtu.be/4lF1wbAqLt4'
+                                ),
+                                array(
+                                    'type' => 'uri',
+                                    'label' => '彩飄盟之歌線上聽',
+                                    'uri' => 'https://streetvoice.com/crimson_math_i31/songs/543314/'
+                                ),
+                                array(
+                                    'type' => 'uri',
+                                    'label' => '歌曲原創粉絲專頁',
+                                    'uri' => 'https://www.facebook.com/rainbowflagsong/'
+                                )
+                            )
+                        )
+                    )
+                )
+            )
+        )
+    ));
+}
+/**
+==============================
+小助理
+==============================
+*/
+if (strtolower($message['text']) == "小助理" || $message['text'] == "小助理"){
+    $client->replyMessage(array(
+        'replyToken' => $event['replyToken'],
+        'messages' => array(
+            array(
+                'type' => 'template', // 訊息類型 (模板)
+                'altText' => '歡迎來到彩飄性別權益推動聯盟！', // 替代文字
+                'template' => array(
+                    'type' => 'carousel', // 類型 (旋轉木馬)
+                    'columns' => array(
+                        array(
+                            'thumbnailImageUrl' => 'https://i.imgur.com/hd32upY.png',
+                            'title' => '彩飄性別權益推動聯盟',
+                            'text' => '成為風，讓彩虹旗飄揚',
+                            'actions' => array(
+                                array(
+                                    'type' => 'uri',
+                                    'label' => '官方網站',
+                                    'uri' => 'https://sites.google.com/view/rfgraa'
+                                ),
+                                array(
+                                    'type' => 'uri',
+                                    'label' => '粉專點讚，設為搶先看',
+                                    'uri' => 'https://www.facebook.com/RFGRAA'
+                                ),
+                                array(
+                                    'type' => 'uri',
+                                    'label' => '加入彩飄盟Line@生活圈',
+                                    'uri' => 'https://line.me/R/ti/p/@fvk1609b'
+                                )
+                            )
+                        ),
+                        array(
+                            'thumbnailImageUrl' => 'https://i.imgur.com/hd32upY.png',
+                            'title' => '彩虹補給站',
+                            'text' => '彩飄盟友善環境',
+                            'actions' => array(
+                                array(
+                                    'type' => 'uri',
+                                    'label' => '彩虹補給站名冊',
+                                    'uri' => 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTjQTmR2T-mCgAYXveamDLNpE0nmyQd04HwBr_GCHFa7NwCW4ncvDwABnHQ0IymmgqEiyeIIJLtbYvP/pubhtml?gid=0&single=true'
+                                ),
+                                array(
+                                    'type' => 'uri',
+                                    'label' => '站點地圖',
+                                    'uri' => 'https://drive.google.com/open?id=139uI9wmK6R-MAXnXXGVvzMKztQty2pYK&usp=sharing'
+                                ),
+                                array(
+                                    'type' => 'uri',
+                                    'label' => '加入我們成為友善環境',
+                                    'uri' => 'https://goo.gl/forms/LrZB4AAJTqkQkn8F3'
+                                )
+                            )
+                        ),
+                        array(
+                            'thumbnailImageUrl' => 'https://i.imgur.com/hd32upY.png',
+                            'title' => 'YouTube頻道',
+                            'text' => '成為風，讓彩虹旗飄揚',
+                            'actions' => array(
+                                array(
+                                    'type' => 'uri',
+                                    'label' => '彩飄盟官方YouTube頻道',
+                                    'uri' => 'https://goo.gl/9YVwr6'
+                                ),
+                                array(
+                                    'type' => 'uri',
+                                    'label' => '記得訂閱頻道',
+                                    'uri' => 'https://goo.gl/9YVwr6'
+                                ),
+                                array(
+                                    'type' => 'uri',
+                                    'label' => '並打開鈴鐺！',
+                                    'uri' => 'https://goo.gl/9YVwr6'
+                                )
+                            )
+                        ),
+                        array(
+                            'thumbnailImageUrl' => 'https://i.imgur.com/hd32upY.png',
+                            'title' => '彩飄盟之歌-彩虹旗',
+                            'text' => '唱出彩虹旗・世界更美麗',
+                            'actions' => array(
+                                array(
+                                    'type' => 'uri',
+                                    'label' => '彩飄盟之歌ＭＶ',
+                                    'uri' => 'https://youtu.be/4lF1wbAqLt4'
+                                ),
+                                array(
+                                    'type' => 'uri',
+                                    'label' => '彩飄盟之歌線上聽',
+                                    'uri' => 'https://streetvoice.com/crimson_math_i31/songs/543314/'
+                                ),
+                                array(
+                                    'type' => 'uri',
+                                    'label' => '歌曲原創粉絲專頁',
+                                    'uri' => 'https://www.facebook.com/rainbowflagsong/'
+                                )
+                            )
+                        )
+                    )
+                )
+            )
+        )
+    ));
+}
+/**
+陣列輸出 Json
+==============================
+
+==============================
+*/
+
+foreach ($client->parseEvents() as $event) {
+switch ($event['type']) {       
+    case 'message':
+        // 讀入訊息
+        $message = $event['message'];
+
+$json = file_get_contents('https://spreadsheets.google.com/feeds/list/1ARv7PRmjKrHXxMpdFwuNvwPshXs9hhBTzKJUsMcYytg/od6/public/values?alt=json');
+            $data = json_decode($json, true);
+            $result = array();
+            foreach ($data['feed']['entry'] as $item) {
+                $keywords = explode(',', $item['gsx$keyword']['$t']);
+                foreach ($keywords as $keyword) {
+                    if (mb_strpos($message['text'], $keyword) !== false) {
+                        $candidate = array(
+                            'thumbnailImageUrl' => $item['gsx$photourl']['$t'],
+                            'title' => $item['gsx$title']['$t'],
+                            'text' => $item['gsx$text']['$t'],
+                            'actions' => array(
+                                array(
+                                    'type' => 'uri',
+                                    'label' => $item['gsx$urltxt']['$t'],
+                                    'uri' => $item['gsx$url']['$t'],
+                                    ),
+                                ),
+                            );
+                        array_push($result, $candidate);
+                    }
+                }
+            }
+            switch ($message['type']) {
+                case 'text':
+                    $client->replyMessage(array(
+                        'replyToken' => $event['replyToken'],
+                        'messages' => array(
+                            array(
+                                'type' => 'text',
+                                'text' => '小助理發現了關鍵字，提供你下列資訊：',
+                            ),
+                            array(
+                                'type' => 'template',
+                                'altText' => '彩飄盟小助理資訊',
+                                'template' => array(
+                                    'type' => 'carousel',
+                                    'columns' => $result,
+                                ),
+                            ),
+
+                        ),
+                    ));
+                break;
+            default:
+                error_log("Unsupporeted message type: " . $message['type']);
+                break;
+        }
+        break;
+    default:
+        error_log("Unsupporeted event type: " . $event['type']);
+        break;
+}
+}
+
 
                     break;
                 
