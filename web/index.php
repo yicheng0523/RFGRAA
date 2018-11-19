@@ -30,56 +30,6 @@ foreach ($client->parseEvents() as $event) {
     switch ($event['type']) {
         case 'message':
             $message = $event['message'];
-            
-            $json = file_get_contents('https://spreadsheets.google.com/feeds/list/1ARv7PRmjKrHXxMpdFwuNvwPshXs9hhBTzKJUsMcYytg/od6/public/values?alt=json');
-            $data = json_decode($json, true);
-            $result = array();
-            
-            foreach ($data['feed']['entry'] as $item) {
-                $keywords = explode(',', $item['gsx$keyword']['$t']);
-                foreach ($keywords as $keyword) {
-                    if (mb_strpos($message['text'], $keyword) !== false) {
-                        $candidate = array(
-                            'thumbnailImageUrl' => $item['gsx$photourl']['$t'],
-                            'title' => $item['gsx$title']['$t'],
-                            'text' => $item['gsx$text']['$t'],
-                            'actions' => array(
-                                array(
-                                    'type' => 'uri',
-                                    'label' => $item['gsx$urltxt']['$t'],
-                                    'uri' => $item['gsx$url']['$t'],
-                                    ),
-                                ),
-                            );
-                        array_push($result, $candidate);
-                    }
-                }
-            }
-            switch ($message['type']) {
-                case 'text':
-                    $client->replyMessage(array(
-                        'replyToken' => $event['replyToken'],
-                        'messages' => array(
-                            array(
-                                'type' => 'text',
-                                'text' => '小助理發現了關鍵字，提供你下列資訊：',
-                            ),
-                            array(
-                                'type' => 'template',
-                                'altText' => '彩飄盟小助理資訊',
-                                'template' => array(
-                                    'type' => 'carousel',
-                                    'columns' => $result,
-                                ),
-                            ),
-
-                        ),
-                    ));
-            }
-            
-            }
-            break;
-            
             switch ($message['type']) {
                 case 'text':
 /**
@@ -446,7 +396,8 @@ if (strtolower($message['text']) == "小助理" || $message['text'] == "小助�
 }
 
                     break;
-                
+            }
+            break;                
             
         default:
             error_log("Unsupporeted event type: " . $event['type']);
