@@ -22,6 +22,7 @@ require_once('./LINEBotTiny.php');
 
 $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
 $channelSecret = getenv('LINE_CHANNEL_SECRET');
+$googledataspi = "https://spreadsheets.google.com/feeds/list/1ARv7PRmjKrHXxMpdFwuNvwPshXs9hhBTzKJUsMcYytg/od6/public/values?alt=json";
 
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 foreach ($client->parseEvents() as $event) {
@@ -29,7 +30,7 @@ foreach ($client->parseEvents() as $event) {
         case 'message':
             $message = $event['message'];
             
-$json = file_get_contents('https://spreadsheets.google.com/feeds/list/1ARv7PRmjKrHXxMpdFwuNvwPshXs9hhBTzKJUsMcYytg/od6/public/values?alt=json');
+            $json = file_get_contents($googledataspi);
             $data = json_decode($json, true);
             $result = array();
             foreach ($data['feed']['entry'] as $item) {
@@ -72,15 +73,8 @@ $json = file_get_contents('https://spreadsheets.google.com/feeds/list/1ARv7PRmjK
 
                         ),
                     ));
-                break;
-            default:
-                error_log("Unsupporeted message type: " . $message['type']);
-                break;
-        }
-        break;
-    default:
-        error_log("Unsupporeted event type: " . $event['type']);
-        break;
+            }
+
             
             switch ($message['type']) {
                 case 'text':
